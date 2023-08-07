@@ -2,6 +2,7 @@ import { Image } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Home from '../screens/Home'
+import Profile from '../screens/Profile'
 
 import { dark } from '../themes/dark'
 
@@ -86,7 +87,7 @@ const TabRoutes = () => {
             )
         }}
         name="Profile"
-        component={Home}
+        component={Profile}
       />
     </AppTab.Navigator>
   )
