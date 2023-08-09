@@ -14,9 +14,11 @@ const TabRoutes = () => {
       screenOptions={{
         tabBarStyle: {
           backgroundColor: dark.colors.background,
-          paddingTop: 16
+          paddingTop: 16,
+          borderTopWidth: 0
         },
-        title: ''
+        title: '',
+        headerShown: false
       }}
     >
       <AppTab.Screen
