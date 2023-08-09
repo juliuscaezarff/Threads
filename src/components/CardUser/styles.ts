@@ -55,3 +55,24 @@ export const Bio = styled.Text`
   color: ${dark.colors.white};
   margin-top: 16px;
 `
+
+export const Followers = styled.Text`
+  font-family: 'Inter_500Medium';
+  font-size: 12px;
+  color: ${dark.colors.gray};
+  margin-left: 8px;
+`
+
+export const AvatarGroupContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+  margin-top: 16px;
+`
+
+export const AvatarGroup = styled.Image<{ ml?: string }>`
+  height: 22px;
+  width: 22px;
+  border-radius: 11px;
+  margin-left: ${({ ml }) => (ml ? ml : 0)}px;
+  border: 2px ${dark.colors.background};
+`
