@@ -3,6 +3,7 @@ import React from 'react'
 import * as S from './styles'
 import CardUser from '../../components/CardUser'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import Button from '../../components/Button'
 
 const Profile = () => {
   const Header = () => (
@@ -24,9 +25,14 @@ const Profile = () => {
   return (
     <S.Container>
       <SafeAreaView>
-      <S.SafeArea />
-      <Header />
-      <CardUser />
+        <S.SafeArea />
+        <Header />
+        <CardUser />
+        <S.ContainerButtons>
+          <Button inverted text="Editar perfil" />
+          <S.Spacing />
+          <Button inverted text="Compartilhar perfil" />
+        </S.ContainerButtons>
       </SafeAreaView>
     </S.Container>
   )
