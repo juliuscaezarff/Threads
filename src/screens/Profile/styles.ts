@@ -25,3 +25,12 @@ export const Row = styled.View`
   flex-direction: row;
   align-items: center;
 `;
+
+export const ContainerButtons = styled.View`
+  flex-direction: row;
+  padding: 16px;
+`
+
+export const Spacing = styled.View`
+  width: 8px;
+`
