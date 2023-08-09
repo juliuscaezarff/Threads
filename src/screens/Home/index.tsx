@@ -1,9 +1,9 @@
 import React from 'react';
-import { View } from 'react-native';
 
+import * as S from './styles'
 
-const Home: React.FC = () => {
-  return <View />;
+const Home = () => {
+  return <S.Container />;
 }
 
 export default Home;
