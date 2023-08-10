@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Button from '../../components/Button'
 import { Tabs } from 'react-native-collapsible-tab-view'
 import { dark } from '../../themes/dark'
+import Threads from '../../components/Threads'
 
 const Profile = () => {
   const Header = () => (
@@ -27,7 +28,6 @@ const Profile = () => {
   const Content = () => (
     <S.Container>
       <SafeAreaView>
-        <S.SafeArea />
         <Header />
         <CardUser />
         <S.ContainerButtons>
@@ -40,21 +40,29 @@ const Profile = () => {
   )
 
   return (
-    <Tabs.Container
-      renderTabBar={(props) => <S.CustomTabBar {...props}/>}
-      headerContainerStyle={{ backgroundColor: dark.colors.background }}
-      renderHeader={Content}
-    >
-      <Tabs.Tab name="threads" label={() => <S.TabLabel>Threads</S.TabLabel>}>
-        <></>
-      </Tabs.Tab>
-      <Tabs.Tab
-        name="respostas"
-        label={() => <S.TabLabel>Respostas</S.TabLabel>}
+    <>
+      <S.SafeArea />
+
+      <Tabs.Container
+        renderTabBar={props => <S.CustomTabBar {...props} />}
+        headerContainerStyle={{ backgroundColor: dark.colors.background }}
+        renderHeader={Content}
       >
-        <></>
-      </Tabs.Tab>
-    </Tabs.Container>
+        <Tabs.Tab name="threads" label={() => <S.TabLabel>Threads</S.TabLabel>}>
+          <S.Container>
+            <Tabs.ScrollView>
+              <Threads />
+            </Tabs.ScrollView>
+          </S.Container>
+        </Tabs.Tab>
+        <Tabs.Tab
+          name="respostas"
+          label={() => <S.TabLabel>Respostas</S.TabLabel>}
+        >
+          <></>
+        </Tabs.Tab>
+      </Tabs.Container>
+    </>
   )
 }
 
