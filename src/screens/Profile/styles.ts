@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { dark } from '../../themes/dark';
+import { MaterialTabBar } from 'react-native-collapsible-tab-view';
 
 export const Container = styled.View`
   flex: 1;
@@ -34,3 +35,15 @@ export const ContainerButtons = styled.View`
 export const Spacing = styled.View`
   width: 8px;
 `
+
+export const TabLabel = styled.Text`
+  font-family: "Inter_600SemiBold";
+  font-size: 12px;
+  color: ${dark.colors.white};
+`
+
+export const CustomTabBar = styled(MaterialTabBar).attrs({
+  indicatorStyle: {
+    backgroundColor: dark.colors.white,
+  }
+})``
