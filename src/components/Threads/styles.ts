@@ -1,7 +1,9 @@
 import { styled } from 'styled-components/native'
 import { dark } from '../../themes/dark'
 
-export const Container = styled.View``
+export const Container = styled.View`
+  padding: 16px;
+`
 
 export const ContainerPost = styled.TouchableOpacity``
 
@@ -29,3 +31,23 @@ export const Action = styled.TouchableOpacity`
 `
 
 export const Icon = styled.Image``
+
+export const Avatar = styled.Image`
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+`
+
+export const Row = styled.View`
+  flex-direction: row;
+`
+export const Column = styled.View`
+  margin-right: 8px;
+`
+
+export const Line = styled.View`
+  flex: 1;
+  background-color: ${dark.colors.gray};
+  width: 1.5px;
+margin: 16px 0 8px 0;
+`
