@@ -20,7 +20,10 @@ export const ButtonIcon = styled.TouchableOpacity<{mr?: string}>`
 
 export const Icon = styled.Image``;
 
-export const SafeArea = styled.SafeAreaView``; 
+export const SafeArea = styled.SafeAreaView`
+  background-color: ${dark.colors.background};
+  z-index: 99;
+`; 
 
 export const Row = styled.View`
   flex-direction: row;
