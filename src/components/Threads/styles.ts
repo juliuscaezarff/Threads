@@ -1,5 +1,6 @@
 import { styled } from 'styled-components/native'
 import { dark } from '../../themes/dark'
+import { IAvatarGroupStyle } from './types'
 
 export const Container = styled.View`
   padding: 16px;
@@ -8,7 +9,7 @@ export const Container = styled.View`
 export const ContainerPost = styled.TouchableOpacity``
 
 export const UserName = styled.Text`
-  font-family: "Inter_500Medium";
+  font-family: 'Inter_500Medium';
   font-size: 14px;
   color: ${dark.colors.white};
 `
@@ -49,5 +50,24 @@ export const Line = styled.View`
   flex: 1;
   background-color: ${dark.colors.gray};
   width: 1.5px;
-margin: 16px 0 8px 0;
+  margin: 16px 0 8px 0;
 `
+
+export const InteractionsContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+  margin-top: 8px;
+`
+
+export const AvatarGroupContent = styled.View`
+  align-items: center;
+  margin-top: 8px;
+`
+export const AvatarGroup = styled.Image<IAvatarGroupStyle>`
+  width: ${({ h }) => h ? h : 20}px;
+  height: ${({ w }) => w ? w : 20}px;
+  margin-top: ${({ top }) => top ? top : 0};
+  border-radius: 10px;
+  margin-right: 4px;
+`
+
