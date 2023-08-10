@@ -30,6 +30,30 @@ const Threads = () => {
     </S.ActionsContainer>
   )
 
+  const Interections = () => (
+    <S.InteractionsContainer>
+      <S.AvatarGroupContent>
+        <S.Row>
+          <S.AvatarGroup
+            h="16"
+            w="16"
+            source={{ uri: 'https://randomuser.me/api/portraits/men/81.jpg' }}
+          />
+          <S.AvatarGroup
+            top="-8"
+            source={{ uri: 'https://randomuser.me/api/portraits/men/81.jpg' }}
+          />
+        </S.Row>
+        <S.AvatarGroup
+          top="-4"
+          h="12"
+          w="12"
+          source={{ uri: 'https://randomuser.me/api/portraits/men/81.jpg' }}
+        />
+      </S.AvatarGroupContent>
+    </S.InteractionsContainer>
+  )
+
   return (
     <S.Container>
       <S.Row>
@@ -44,6 +68,7 @@ const Threads = () => {
           <ActionsButtons />
         </S.Column>
       </S.Row>
+      <Interections />
     </S.Container>
   )
 }
