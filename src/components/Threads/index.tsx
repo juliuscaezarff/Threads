@@ -16,24 +16,34 @@ const Threads = () => {
   const ActionsButtons = () => (
     <S.ActionsContainer>
       <S.Action>
-        <S.Icon source={require("../../assets/images/actions/like.png")}/>
+        <S.Icon source={require('../../assets/images/actions/like.png')} />
       </S.Action>
       <S.Action>
-        <S.Icon source={require("../../assets/images/actions/comment.png")}/>
+        <S.Icon source={require('../../assets/images/actions/comment.png')} />
       </S.Action>
       <S.Action>
-        <S.Icon source={require("../../assets/images/actions/reply.png")}/>
+        <S.Icon source={require('../../assets/images/actions/reply.png')} />
       </S.Action>
       <S.Action>
-        <S.Icon source={require("../../assets/images/actions/share.png")}/>
+        <S.Icon source={require('../../assets/images/actions/share.png')} />
       </S.Action>
     </S.ActionsContainer>
   )
 
   return (
     <S.Container>
-      <Post />
-      <ActionsButtons />
+      <S.Row>
+        <S.Column style={{ alignItems: 'center' }}>
+          <S.Avatar
+            source={{ uri: 'https://randomuser.me/api/portraits/men/81.jpg' }}
+          />
+          <S.Line />
+        </S.Column>
+        <S.Column>
+          <Post />
+          <ActionsButtons />
+        </S.Column>
+      </S.Row>
     </S.Container>
   )
 }
