@@ -13,9 +13,27 @@ const Threads = () => {
     </S.ContainerPost>
   )
 
+  const ActionsButtons = () => (
+    <S.ActionsContainer>
+      <S.Action>
+        <S.Icon source={require("../../assets/images/actions/like.png")}/>
+      </S.Action>
+      <S.Action>
+        <S.Icon source={require("../../assets/images/actions/comment.png")}/>
+      </S.Action>
+      <S.Action>
+        <S.Icon source={require("../../assets/images/actions/reply.png")}/>
+      </S.Action>
+      <S.Action>
+        <S.Icon source={require("../../assets/images/actions/share.png")}/>
+      </S.Action>
+    </S.ActionsContainer>
+  )
+
   return (
     <S.Container>
       <Post />
+      <ActionsButtons />
     </S.Container>
   )
 }
