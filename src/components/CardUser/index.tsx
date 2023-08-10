@@ -5,8 +5,8 @@ import * as S from './styles'
 const UserInfo = () => (
   <S.Column>
     <S.Name>Julius Caezar</S.Name>
-    <S.UserName>juliusCaezar</S.UserName>
     <S.RowUserName>
+      <S.UserName>juliusCaezar</S.UserName>
       <S.TagContainer>
         <S.Tag>threads.net</S.Tag>
       </S.TagContainer>
