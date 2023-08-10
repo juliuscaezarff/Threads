@@ -4,6 +4,8 @@ import * as S from './styles'
 import CardUser from '../../components/CardUser'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Button from '../../components/Button'
+import { Tabs } from 'react-native-collapsible-tab-view'
+import { dark } from '../../themes/dark'
 
 const Profile = () => {
   const Header = () => (
@@ -22,7 +24,7 @@ const Profile = () => {
     </S.Header>
   )
 
-  return (
+  const Content = () => (
     <S.Container>
       <SafeAreaView>
         <S.SafeArea />
@@ -35,6 +37,24 @@ const Profile = () => {
         </S.ContainerButtons>
       </SafeAreaView>
     </S.Container>
+  )
+
+  return (
+    <Tabs.Container
+      renderTabBar={(props) => <S.CustomTabBar {...props}/>}
+      headerContainerStyle={{ backgroundColor: dark.colors.background }}
+      renderHeader={Content}
+    >
+      <Tabs.Tab name="threads" label={() => <S.TabLabel>Threads</S.TabLabel>}>
+        <></>
+      </Tabs.Tab>
+      <Tabs.Tab
+        name="respostas"
+        label={() => <S.TabLabel>Respostas</S.TabLabel>}
+      >
+        <></>
+      </Tabs.Tab>
+    </Tabs.Container>
   )
 }
 
