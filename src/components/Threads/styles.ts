@@ -70,4 +70,17 @@ export const AvatarGroup = styled.Image<IAvatarGroupStyle>`
   border-radius: 10px;
   margin-right: 4px;
 `
+export const Likes = styled.Text`
+  font-family: "Inter_400Regular";
+  font-size: 14px;
+  color: ${dark.colors.gray};
+  margin-left: 8px;
+`
 
+export const PostImage = styled.Image`
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  margin-right: 32px;
+  margin-bottom: 16px;
+`
