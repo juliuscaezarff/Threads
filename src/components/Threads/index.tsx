@@ -5,11 +5,12 @@ import * as S from './styles'
 const Threads = () => {
   const Post = () => (
     <S.ContainerPost>
-      <S.UserName>Julius Caezar</S.UserName>
+      <S.UserName>juliusCaezar</S.UserName>
       <S.Post>
         Tempor dolor proident duis incididunt et. Cillum incididunt irure nisi
         excepteur sit ad ipsum consectetur proident deserunt sint
       </S.Post>
+      <S.PostImage source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZi7JLlt8syn7ysvA-znyz3fCqqU9MY64cDKWsz_FS9g_5m2K8ZOyFuTNObfpqBMepgpg&usqp=CAU" }}/>
     </S.ContainerPost>
   )
 
@@ -51,6 +52,7 @@ const Threads = () => {
           source={{ uri: 'https://randomuser.me/api/portraits/men/81.jpg' }}
         />
       </S.AvatarGroupContent>
+      <S.Likes>7 respostas - 59 curtidas</S.Likes>
     </S.InteractionsContainer>
   )
 
