@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import TabRoutes from './tab.routes'
 
@@ -14,8 +14,8 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
   Inter_800ExtraBold,
-  Inter_900Black,
-} from "@expo-google-fonts/inter";
+  Inter_900Black
+} from '@expo-google-fonts/inter'
 
 const Routes = () => {
   let [fontsLoaded] = useFonts({
@@ -27,8 +27,8 @@ const Routes = () => {
     Inter_600SemiBold,
     Inter_700Bold,
     Inter_800ExtraBold,
-    Inter_900Black,
-  });
+    Inter_900Black
+  })
 
   React.useEffect(() => {
     async function prepare() {
@@ -39,12 +39,12 @@ const Routes = () => {
   }, [])
 
   const onLayoutRootView = React.useCallback(async () => {
-    if(fontsLoaded) {
+    if (fontsLoaded) {
       await SplashScreen.hideAsync()
     }
   }, [fontsLoaded])
 
-  if(!fontsLoaded) return null;
+  if (!fontsLoaded) return null
 
   return (
     <NavigationContainer onReady={onLayoutRootView}>
