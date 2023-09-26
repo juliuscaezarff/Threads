@@ -6,7 +6,9 @@ export const Container = styled.View`
   padding: 16px;
 `
 
-export const ContainerPost = styled.TouchableOpacity``
+export const ContainerPost = styled.TouchableOpacity`
+  padding-right: 32px;
+`
 
 export const UserName = styled.Text`
   font-family: 'Inter_500Medium';
