@@ -1,16 +1,14 @@
 import React from 'react'
 
 import * as S from './styles'
+import { IPost } from './types'
 
-const Threads = () => {
+const Threads = ({ ...props }: IPost) => {
   const Post = () => (
     <S.ContainerPost>
-      <S.UserName>juliusCaezar</S.UserName>
-      <S.Post>
-        Tempor dolor proident duis incididunt et. Cillum incididunt irure nisi
-        excepteur sit ad ipsum consectetur proident deserunt sint
-      </S.Post>
-      <S.PostImage source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZi7JLlt8syn7ysvA-znyz3fCqqU9MY64cDKWsz_FS9g_5m2K8ZOyFuTNObfpqBMepgpg&usqp=CAU" }}/>
+      <S.UserName>{props.username}</S.UserName>
+      <S.Post>{props.post}</S.Post>
+      {props.postImage && <S.PostImage source={{ uri: props.postImage }} />}
     </S.ContainerPost>
   )
 
@@ -60,9 +58,7 @@ const Threads = () => {
     <S.Container>
       <S.Row>
         <S.Column style={{ alignItems: 'center' }}>
-          <S.Avatar
-            source={{ uri: 'https://randomuser.me/api/portraits/men/81.jpg' }}
-          />
+          <S.Avatar source={{ uri: props.avatar_uri }} />
           <S.Line />
         </S.Column>
         <S.Column>
