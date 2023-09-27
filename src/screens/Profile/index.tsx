@@ -8,6 +8,9 @@ import { Tabs } from 'react-native-collapsible-tab-view'
 import { dark } from '../../themes/dark'
 import Threads from '../../components/Threads'
 
+import posts from '../../data/posts.json'
+import { IPost } from '../../components/Threads/types'
+
 const Profile = () => {
   const Header = () => (
     <S.Header>
@@ -50,9 +53,11 @@ const Profile = () => {
       >
         <Tabs.Tab name="threads" label={() => <S.TabLabel>Threads</S.TabLabel>}>
           <S.Container>
-            <Tabs.ScrollView>
-              <Threads />
-            </Tabs.ScrollView>
+            <Tabs.FlatList
+              data={posts}
+              keyExtractor={(item: IPost) => `${item.id}`}
+              renderItem={({ item }) => <Threads {...item} />}
+            />
           </S.Container>
         </Tabs.Tab>
         <Tabs.Tab
