@@ -5,6 +5,7 @@ import Home from '../screens/Home'
 import Profile from '../screens/Profile'
 
 import { dark } from '../themes/dark'
+import Search from '../screens/Search'
 
 const TabRoutes = () => {
   const AppTab = createBottomTabNavigator()
@@ -47,7 +48,7 @@ const TabRoutes = () => {
             )
         }}
         name="Search"
-        component={Home}
+        component={Search}
       />
       <AppTab.Screen
         options={{
